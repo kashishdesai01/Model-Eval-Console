@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+dist/
+.env
+.cache/
+artifacts/
+frontend/test-results/
+frontend/playwright-report/
+*.egg-info/
+*.tsbuildinfo
+.DS_Store
