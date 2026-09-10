@@ -1,0 +1,7 @@
+{
+  "model_id": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "dataset_id": "stanfordnlp/imdb",
+  "dataset_config": "plain_text",
+  "dataset_revision": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31"
+}

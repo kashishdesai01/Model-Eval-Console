@@ -1,0 +1,7 @@
+{
+  "model_id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+  "model_revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+  "dataset_id": "stanfordnlp/sst2",
+  "dataset_config": "default",
+  "dataset_revision": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb"
+}
