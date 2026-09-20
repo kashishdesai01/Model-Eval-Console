@@ -1,0 +1,84 @@
+name: Verify model eval console
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '17 8 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: mec
+          POSTGRES_PASSWORD: mec
+          POSTGRES_DB: mec
+        ports: [5438:5432]
+        options: >-
+          --health-cmd 'pg_isready -U mec -d mec'
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      MEC_DATABASE_URL: postgresql+psycopg://mec:mec@localhost:5438/mec
+      MEC_TEST_DATABASE_URL: postgresql+psycopg://mec:mec@localhost:5438/mec
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --python 3.12
+      - run: uv run ruff check app tests migrations ../scripts
+      - run: uv run ruff format --check app tests migrations ../scripts
+      - run: uv run mypy app
+      - run: uv run alembic upgrade head
+      - run: uv run alembic check
+      - run: uv run pytest -m 'not slow'
+      - if: github.ref == 'refs/heads/main' || github.event_name == 'schedule'
+        run: uv run pytest -m slow
+      - run: uv run python ../scripts/export_openapi.py && git diff --exit-code -- openapi.json
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run generate && git diff --exit-code -- src/api/schema.d.ts
+      - run: npm run lint && npm run format:check && npm run build && npm test
+  end-to-end:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: docker compose up --build -d --wait
+      - run: docker compose exec -T api python /app/scripts/seed_fixtures.py --output /tmp/fixtures.json
+      - run: docker compose exec -T api python /app/scripts/check_gate.py --fixtures /tmp/fixtures.json
+      - run: npm ci && npx playwright install --with-deps chromium && npm run e2e
+        working-directory: frontend
+      - if: failure()
+        run: docker compose logs --no-color
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-report
+          path: frontend/playwright-report
+      - if: always()
+        run: docker compose down

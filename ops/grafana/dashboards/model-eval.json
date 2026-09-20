@@ -1,0 +1,10 @@
+{
+  "uid": "model-eval", "title": "Model Eval Console", "schemaVersion": 40, "version": 1,
+  "refresh": "10s", "time": {"from": "now-1h", "to": "now"},
+  "panels": [
+    {"id": 1, "title": "Queue depth", "type": "timeseries", "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8}, "datasource": {"uid": "prometheus"}, "targets": [{"expr": "mec_queue_depth", "refId": "A"}]},
+    {"id": 2, "title": "Completed attempts by outcome", "type": "timeseries", "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8}, "datasource": {"uid": "prometheus"}, "targets": [{"expr": "sum by (status) (increase(mec_runs_total[15m]))", "legendFormat": "{{status}}", "refId": "A"}]},
+    {"id": 3, "title": "Inference batch p95 (seconds)", "type": "timeseries", "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8}, "datasource": {"uid": "prometheus"}, "targets": [{"expr": "histogram_quantile(0.95, sum by (le, quantization) (rate(mec_inference_latency_seconds_bucket[5m])))", "legendFormat": "{{quantization}}", "refId": "A"}]},
+    {"id": 4, "title": "Expired leases reclaimed", "type": "stat", "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8}, "datasource": {"uid": "prometheus"}, "targets": [{"expr": "sum(mec_lease_reclaims_total)", "refId": "A"}]}
+  ]
+}
