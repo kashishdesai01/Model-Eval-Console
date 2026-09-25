@@ -1,0 +1,47 @@
+{
+  "balanced": {
+    "probabilities_minus_zero_plus": [
+      0.04,
+      0.92,
+      0.04
+    ],
+    "true_delta": 0.0,
+    "trials": 500,
+    "n_examples": 872,
+    "covered": 478,
+    "coverage": 0.956,
+    "data_seed": 71,
+    "bootstrap_seed": 42,
+    "n_resamples": 10000
+  },
+  "asymmetric": {
+    "probabilities_minus_zero_plus": [
+      0.03,
+      0.95,
+      0.02
+    ],
+    "true_delta": -0.009999999999999998,
+    "trials": 500,
+    "n_examples": 872,
+    "covered": 472,
+    "coverage": 0.944,
+    "data_seed": 71,
+    "bootstrap_seed": 42,
+    "n_resamples": 10000
+  },
+  "sparse_improvement": {
+    "probabilities_minus_zero_plus": [
+      0.0,
+      0.999,
+      0.001
+    ],
+    "true_delta": 0.001,
+    "trials": 500,
+    "n_examples": 872,
+    "covered": 303,
+    "coverage": 0.606,
+    "data_seed": 71,
+    "bootstrap_seed": 42,
+    "n_resamples": 10000
+  }
+}

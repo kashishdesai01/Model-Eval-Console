@@ -1,0 +1,2316 @@
+{
+  "manifest": {
+    "model_id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+    "model_revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+    "dataset_id": "stanfordnlp/sst2",
+    "dataset_config": "default",
+    "dataset_revision": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb"
+  },
+  "dataset": {
+    "id": "4884153d-f751-4407-93ee-6a9c67aa2530",
+    "name": "SST-2 validation",
+    "hf_dataset": "stanfordnlp/sst2",
+    "hf_config": "default",
+    "split": "validation",
+    "hf_revision": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+    "content_hash": "dd5ac3ff6d6b82764596848824822006276abcfb7401d6c44078d01f852cfce4",
+    "n_examples": 872
+  },
+  "runs": {
+    "baseline": {
+      "id": "057200d6-2a6f-4940-8045-402a3721538a",
+      "candidate_id": "1f66cecf-a9eb-4a3c-bad4-199ae1cc8d0e",
+      "dataset_id": "4884153d-f751-4407-93ee-6a9c67aa2530",
+      "status": "succeeded",
+      "attempts": 1,
+      "max_attempts": 3,
+      "code_version": "source-sha256:545e4fe70afe19554097ad9a95ae4c52cdcee8fce6c81000a767a7db1d882e6a",
+      "env": {
+        "torch": "2.9.1+cpu",
+        "python": "3.12.14",
+        "machine": "aarch64",
+        "evidence": "measured",
+        "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+        "num_threads": 2,
+        "transformers": "4.57.6",
+        "quantization_engine": "qnnpack"
+      },
+      "metrics": {
+        "accuracy": 0.9105504587155964,
+        "macro_f1": 0.9104298356510746,
+        "weights_bytes": 267859887,
+        "latency_p50_ms": 316.67678550002165,
+        "latency_p95_ms": 376.7577943004653,
+        "latency_repeats": 5,
+        "latency_batch_size": 8,
+        "latency_sample_indices": [
+          0,
+          13,
+          27,
+          41,
+          55,
+          69,
+          82,
+          96,
+          110,
+          124,
+          138,
+          152,
+          165,
+          179,
+          193,
+          207,
+          221,
+          235,
+          248,
+          262,
+          276,
+          290,
+          304,
+          317,
+          331,
+          345,
+          359,
+          373,
+          387,
+          400,
+          414,
+          428,
+          442,
+          456,
+          470,
+          483,
+          497,
+          511,
+          525,
+          539,
+          553,
+          566,
+          580,
+          594,
+          608,
+          622,
+          635,
+          649,
+          663,
+          677,
+          691,
+          705,
+          718,
+          732,
+          746,
+          760,
+          774,
+          788,
+          801,
+          815,
+          829,
+          843,
+          857,
+          871
+        ],
+        "latency_warmup_batches": 20
+      },
+      "error": null,
+      "created_at": "2026-10-04T22:22:47.844920Z",
+      "started_at": "2026-10-04T22:22:48.498462Z",
+      "finished_at": "2026-10-04T22:24:16.693314Z",
+      "progress": 872,
+      "total": 872,
+      "candidate_name": "baseline",
+      "dataset_name": "SST-2 validation"
+    },
+    "batch32": {
+      "id": "c951f81e-fe78-40cf-93a4-460e8c30235c",
+      "candidate_id": "46565f3a-ac4a-453e-868d-8cd25d5c491c",
+      "dataset_id": "4884153d-f751-4407-93ee-6a9c67aa2530",
+      "status": "succeeded",
+      "attempts": 1,
+      "max_attempts": 3,
+      "code_version": "source-sha256:545e4fe70afe19554097ad9a95ae4c52cdcee8fce6c81000a767a7db1d882e6a",
+      "env": {
+        "torch": "2.9.1+cpu",
+        "python": "3.12.14",
+        "machine": "aarch64",
+        "evidence": "measured",
+        "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+        "num_threads": 2,
+        "transformers": "4.57.6",
+        "quantization_engine": "qnnpack"
+      },
+      "metrics": {
+        "accuracy": 0.9105504587155964,
+        "macro_f1": 0.9104298356510746,
+        "weights_bytes": 267859887,
+        "latency_p50_ms": 1047.0681930000865,
+        "latency_p95_ms": 1082.736897500581,
+        "latency_repeats": 5,
+        "latency_batch_size": 32,
+        "latency_sample_indices": [
+          0,
+          13,
+          27,
+          41,
+          55,
+          69,
+          82,
+          96,
+          110,
+          124,
+          138,
+          152,
+          165,
+          179,
+          193,
+          207,
+          221,
+          235,
+          248,
+          262,
+          276,
+          290,
+          304,
+          317,
+          331,
+          345,
+          359,
+          373,
+          387,
+          400,
+          414,
+          428,
+          442,
+          456,
+          470,
+          483,
+          497,
+          511,
+          525,
+          539,
+          553,
+          566,
+          580,
+          594,
+          608,
+          622,
+          635,
+          649,
+          663,
+          677,
+          691,
+          705,
+          718,
+          732,
+          746,
+          760,
+          774,
+          788,
+          801,
+          815,
+          829,
+          843,
+          857,
+          871
+        ],
+        "latency_warmup_batches": 20
+      },
+      "error": null,
+      "created_at": "2026-10-04T22:22:47.888423Z",
+      "started_at": "2026-10-04T22:24:16.700443Z",
+      "finished_at": "2026-10-04T22:25:32.457791Z",
+      "progress": 872,
+      "total": 872,
+      "candidate_name": "batch32",
+      "dataset_name": "SST-2 validation"
+    },
+    "int8": {
+      "id": "47bd8796-3ff7-428c-aa01-0dbb61e90ab7",
+      "candidate_id": "225f315e-99cd-4dcc-9e98-dafae6bc1f2d",
+      "dataset_id": "4884153d-f751-4407-93ee-6a9c67aa2530",
+      "status": "succeeded",
+      "attempts": 1,
+      "max_attempts": 3,
+      "code_version": "source-sha256:545e4fe70afe19554097ad9a95ae4c52cdcee8fce6c81000a767a7db1d882e6a",
+      "env": {
+        "torch": "2.9.1+cpu",
+        "python": "3.12.14",
+        "machine": "aarch64",
+        "evidence": "measured",
+        "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+        "num_threads": 2,
+        "transformers": "4.57.6",
+        "quantization_engine": "qnnpack"
+      },
+      "metrics": {
+        "accuracy": 0.9048165137614679,
+        "macro_f1": 0.9046629230503755,
+        "weights_bytes": 138713239,
+        "latency_p50_ms": 438.2263104998856,
+        "latency_p95_ms": 567.6941075993453,
+        "latency_repeats": 5,
+        "latency_batch_size": 8,
+        "latency_sample_indices": [
+          0,
+          13,
+          27,
+          41,
+          55,
+          69,
+          82,
+          96,
+          110,
+          124,
+          138,
+          152,
+          165,
+          179,
+          193,
+          207,
+          221,
+          235,
+          248,
+          262,
+          276,
+          290,
+          304,
+          317,
+          331,
+          345,
+          359,
+          373,
+          387,
+          400,
+          414,
+          428,
+          442,
+          456,
+          470,
+          483,
+          497,
+          511,
+          525,
+          539,
+          553,
+          566,
+          580,
+          594,
+          608,
+          622,
+          635,
+          649,
+          663,
+          677,
+          691,
+          705,
+          718,
+          732,
+          746,
+          760,
+          774,
+          788,
+          801,
+          815,
+          829,
+          843,
+          857,
+          871
+        ],
+        "latency_warmup_batches": 20
+      },
+      "error": null,
+      "created_at": "2026-10-04T22:22:47.905542Z",
+      "started_at": "2026-10-04T22:25:32.465303Z",
+      "finished_at": "2026-10-04T22:26:32.866154Z",
+      "progress": 872,
+      "total": 872,
+      "candidate_name": "int8",
+      "dataset_name": "SST-2 validation"
+    },
+    "trunc16": {
+      "id": "5e6f4e41-d53a-4a39-884e-922be3ffd012",
+      "candidate_id": "17130bb6-4092-4391-afff-7d2393daa6e1",
+      "dataset_id": "4884153d-f751-4407-93ee-6a9c67aa2530",
+      "status": "succeeded",
+      "attempts": 1,
+      "max_attempts": 3,
+      "code_version": "source-sha256:545e4fe70afe19554097ad9a95ae4c52cdcee8fce6c81000a767a7db1d882e6a",
+      "env": {
+        "torch": "2.9.1+cpu",
+        "python": "3.12.14",
+        "machine": "aarch64",
+        "evidence": "measured",
+        "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+        "num_threads": 2,
+        "transformers": "4.57.6",
+        "quantization_engine": "qnnpack"
+      },
+      "metrics": {
+        "accuracy": 0.8119266055045872,
+        "macro_f1": 0.8112025854557552,
+        "weights_bytes": 267859887,
+        "latency_p50_ms": 113.07787350051512,
+        "latency_p95_ms": 144.3513855491801,
+        "latency_repeats": 5,
+        "latency_batch_size": 8,
+        "latency_sample_indices": [
+          0,
+          13,
+          27,
+          41,
+          55,
+          69,
+          82,
+          96,
+          110,
+          124,
+          138,
+          152,
+          165,
+          179,
+          193,
+          207,
+          221,
+          235,
+          248,
+          262,
+          276,
+          290,
+          304,
+          317,
+          331,
+          345,
+          359,
+          373,
+          387,
+          400,
+          414,
+          428,
+          442,
+          456,
+          470,
+          483,
+          497,
+          511,
+          525,
+          539,
+          553,
+          566,
+          580,
+          594,
+          608,
+          622,
+          635,
+          649,
+          663,
+          677,
+          691,
+          705,
+          718,
+          732,
+          746,
+          760,
+          774,
+          788,
+          801,
+          815,
+          829,
+          843,
+          857,
+          871
+        ],
+        "latency_warmup_batches": 20
+      },
+      "error": null,
+      "created_at": "2026-10-04T22:22:47.929816Z",
+      "started_at": "2026-10-04T22:26:32.871733Z",
+      "finished_at": "2026-10-04T22:26:56.947335Z",
+      "progress": 872,
+      "total": 872,
+      "candidate_name": "trunc16",
+      "dataset_name": "SST-2 validation"
+    }
+  },
+  "comparisons": {
+    "batch32": {
+      "id": "b9a2dc9e-1f3a-4ff7-a064-a721c19b7888",
+      "metric": "accuracy",
+      "baseline": {
+        "run_id": "057200d6-2a6f-4940-8045-402a3721538a",
+        "name": "baseline",
+        "value": 0.9105504587155964
+      },
+      "candidate": {
+        "run_id": "c951f81e-fe78-40cf-93a4-460e8c30235c",
+        "name": "batch32",
+        "value": 0.9105504587155964
+      },
+      "margin": 0.01,
+      "delta": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "verdict": "pass",
+      "mcnemar_p": 1.0,
+      "regressions": 0,
+      "fixes": 0,
+      "standard_error": 0.0,
+      "warnings": [
+        "Sparse disagreements: percentile-bootstrap coverage can be poor. This gate does not establish equivalence outside this benchmark."
+      ],
+      "slices": [
+        {
+          "name": "has_contrast",
+          "n": 110,
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "has_negation",
+          "n": 164,
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "len_long",
+          "n": 225,
+          "delta": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "flips": [],
+      "near_boundary_share": 0.0,
+      "n_examples": 872,
+      "seed": 42,
+      "n_resamples": 10000,
+      "latency_budget_pass": null,
+      "latency_ratio": null,
+      "evidence": "measured"
+    },
+    "int8": {
+      "id": "3b0b5ee7-cda0-49c2-8201-05aa876a0e7e",
+      "metric": "accuracy",
+      "baseline": {
+        "run_id": "057200d6-2a6f-4940-8045-402a3721538a",
+        "name": "baseline",
+        "value": 0.9105504587155964
+      },
+      "candidate": {
+        "run_id": "47bd8796-3ff7-428c-aa01-0dbb61e90ab7",
+        "name": "int8",
+        "value": 0.9048165137614679
+      },
+      "margin": 0.01,
+      "delta": -0.005733944954128441,
+      "ci95": [
+        -0.016055045871559634,
+        0.0045871559633027525
+      ],
+      "verdict": "inconclusive",
+      "mcnemar_p": 0.38331031799316406,
+      "regressions": 13,
+      "fixes": 8,
+      "standard_error": 0.005251658833889693,
+      "warnings": [
+        "Interval crosses the margin; collect more data or explicitly accept the risk."
+      ],
+      "slices": [
+        {
+          "name": "has_contrast",
+          "n": 110,
+          "delta": -0.02727272727272727,
+          "ci95": [
+            -0.07272727272727272,
+            0.00909090909090909
+          ]
+        },
+        {
+          "name": "has_negation",
+          "n": 164,
+          "delta": -0.018292682926829267,
+          "ci95": [
+            -0.04878048780487805,
+            0.012195121951219513
+          ]
+        },
+        {
+          "name": "len_long",
+          "n": 225,
+          "delta": -0.008888888888888889,
+          "ci95": [
+            -0.035555555555555556,
+            0.017777777777777778
+          ]
+        }
+      ],
+      "flips": [
+        {
+          "idx": 20,
+          "text": "pumpkin takes an admirable look at the hypocrisy of political correctness , but it does so with such an uneven tone that you never know when humor ends and tragedy begins . ",
+          "label": 0,
+          "baseline_prob": 0.02265620231628418,
+          "candidate_prob": 0.7885352373123169,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 172,
+          "text": "it seems like i have been waiting my whole life for this movie and now i ca n't wait for the sequel . ",
+          "label": 1,
+          "baseline_prob": 0.7441490292549133,
+          "candidate_prob": 0.1193549856543541,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 178,
+          "text": "it made me want to wrench my eyes out of my head and toss them at the screen . ",
+          "label": 0,
+          "baseline_prob": 0.3340960741043091,
+          "candidate_prob": 0.7851372957229614,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 184,
+          "text": "though perry and hurley make inspiring efforts to breathe life into the disjointed , haphazard script by jay scherick and david ronn , neither the actors nor director reginald hudlin can make it more than fitfully entertaining . ",
+          "label": 0,
+          "baseline_prob": 0.6638742685317993,
+          "candidate_prob": 0.028983784839510918,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 218,
+          "text": "all that 's missing is the spontaneity , originality and delight . ",
+          "label": 0,
+          "baseline_prob": 0.17169252038002014,
+          "candidate_prob": 0.8621237277984619,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 301,
+          "text": "the x potion gives the quickly named blossom , bubbles and buttercup supernatural powers that include extraordinary strength and laser-beam eyes , which unfortunately do n't enable them to discern flimsy screenplays . ",
+          "label": 0,
+          "baseline_prob": 0.4839618504047394,
+          "candidate_prob": 0.5581023693084717,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 399,
+          "text": "if director michael dowse only superficially understands his characters , he does n't hold them in contempt . ",
+          "label": 0,
+          "baseline_prob": 0.9336615204811096,
+          "candidate_prob": 0.033418770879507065,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 440,
+          "text": "this is wild surreal stuff , but brilliant and the camera just kind of sits there and lets you look at this and its like you 're going from one room to the next and none of them have any relation to the other . ",
+          "label": 1,
+          "baseline_prob": 0.2813500165939331,
+          "candidate_prob": 0.6037391424179077,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 496,
+          "text": "it 's about following your dreams , no matter what your parents think . ",
+          "label": 1,
+          "baseline_prob": 0.10592367500066757,
+          "candidate_prob": 0.8752631545066833,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 509,
+          "text": "a movie that successfully crushes a best selling novel into a timeframe that mandates that you avoid the godzilla sized soda . ",
+          "label": 1,
+          "baseline_prob": 0.6467133164405823,
+          "candidate_prob": 0.05898831784725189,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 527,
+          "text": "it has all the excitement of eating oatmeal . ",
+          "label": 0,
+          "baseline_prob": 0.4646449089050293,
+          "candidate_prob": 0.7901066541671753,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 546,
+          "text": "on the heels of the ring comes a similarly morose and humorless horror movie that , although flawed , is to be commended for its straight-ahead approach to creepiness . ",
+          "label": 1,
+          "baseline_prob": 0.035166699439287186,
+          "candidate_prob": 0.8700529932975769,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 626,
+          "text": "this flick is about as cool and crowd-pleasing as a documentary can get . ",
+          "label": 1,
+          "baseline_prob": 0.087542325258255,
+          "candidate_prob": 0.9787068367004395,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 643,
+          "text": "the jabs it employs are short , carefully placed and dead-center . ",
+          "label": 1,
+          "baseline_prob": 0.5921348929405212,
+          "candidate_prob": 0.13949164748191833,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 683,
+          "text": "true tale of courage -- and complicity -- at auschwitz is a harrowing drama that tries to tell of the unspeakable . ",
+          "label": 1,
+          "baseline_prob": 0.3087503910064697,
+          "candidate_prob": 0.5111209750175476,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 697,
+          "text": "not since tom cruise in risky business has an actor made such a strong impression in his underwear . ",
+          "label": 1,
+          "baseline_prob": 0.8139400482177734,
+          "candidate_prob": 0.13416272401809692,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 702,
+          "text": "the reality of the new live-action pinocchio he directed , cowrote and starred in borders on the grotesque . ",
+          "label": 0,
+          "baseline_prob": 0.9856662154197693,
+          "candidate_prob": 0.40525636076927185,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 728,
+          "text": "but taken as a stylish and energetic one-shot , the queen of the damned can not be said to suck . ",
+          "label": 1,
+          "baseline_prob": 0.9909154772758484,
+          "candidate_prob": 0.4424128234386444,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 805,
+          "text": "irwin is a man with enough charisma and audacity to carry a dozen films , but this particular result is ultimately held back from being something greater . ",
+          "label": 0,
+          "baseline_prob": 0.3489186763763428,
+          "candidate_prob": 0.6575420498847961,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 847,
+          "text": "... mafia , rap stars and hood rats butt their ugly heads in a regurgitation of cinematic violence that gives brutal birth to an unlikely , but likable , hero . ' ",
+          "label": 1,
+          "baseline_prob": 0.5248796939849854,
+          "candidate_prob": 0.15975382924079895,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 862,
+          "text": "it 's inoffensive , cheerful , built to inspire the young people , set to an unending soundtrack of beach party pop numbers and aside from its remarkable camerawork and awesome scenery , it 's about as exciting as a sunburn . ",
+          "label": 0,
+          "baseline_prob": 0.22170722484588623,
+          "candidate_prob": 0.9649099707603455,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        }
+      ],
+      "near_boundary_share": 0.0,
+      "n_examples": 872,
+      "seed": 42,
+      "n_resamples": 10000,
+      "latency_budget_pass": false,
+      "latency_ratio": 1.506787958171896,
+      "evidence": "measured"
+    },
+    "trunc16": {
+      "id": "7722fd79-01f2-44c3-a166-3dc1852c08ea",
+      "metric": "accuracy",
+      "baseline": {
+        "run_id": "057200d6-2a6f-4940-8045-402a3721538a",
+        "name": "baseline",
+        "value": 0.9105504587155964
+      },
+      "candidate": {
+        "run_id": "5e6f4e41-d53a-4a39-884e-922be3ffd012",
+        "name": "trunc16",
+        "value": 0.8119266055045872
+      },
+      "margin": 0.01,
+      "delta": -0.09862385321100918,
+      "ci95": [
+        -0.12270642201834862,
+        -0.07568807339449542
+      ],
+      "verdict": "fail",
+      "mcnemar_p": 6.780884736177504e-16,
+      "regressions": 104,
+      "fixes": 18,
+      "standard_error": 0.01221846213889532,
+      "warnings": [],
+      "slices": [
+        {
+          "name": "has_contrast",
+          "n": 110,
+          "delta": -0.20909090909090908,
+          "ci95": [
+            -0.3090909090909091,
+            -0.10909090909090909
+          ]
+        },
+        {
+          "name": "has_negation",
+          "n": 164,
+          "delta": -0.15853658536585366,
+          "ci95": [
+            -0.22560975609756098,
+            -0.09146341463414634
+          ]
+        },
+        {
+          "name": "len_long",
+          "n": 225,
+          "delta": -0.2,
+          "ci95": [
+            -0.26222222222222225,
+            -0.13777777777777778
+          ]
+        }
+      ],
+      "flips": [
+        {
+          "idx": 8,
+          "text": "you do n't have to know about music to appreciate the film 's easygoing blend of comedy and romance . ",
+          "label": 1,
+          "baseline_prob": 0.992671012878418,
+          "candidate_prob": 0.015123510733246803,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 20,
+          "text": "pumpkin takes an admirable look at the hypocrisy of political correctness , but it does so with such an uneven tone that you never know when humor ends and tragedy begins . ",
+          "label": 0,
+          "baseline_prob": 0.02265620231628418,
+          "candidate_prob": 0.9994663596153259,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 31,
+          "text": "... designed to provide a mix of smiles and tears , `` crossroads '' instead provokes a handful of unintentional howlers and numerous yawns . ",
+          "label": 0,
+          "baseline_prob": 0.0033788064029067755,
+          "candidate_prob": 0.9997342228889465,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 36,
+          "text": "the weight of the piece , the unerring professionalism of the chilly production , and the fascination embedded in the lurid topic prove recommendation enough . ",
+          "label": 1,
+          "baseline_prob": 0.9991298317909241,
+          "candidate_prob": 0.016304168850183487,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 37,
+          "text": "( w ) hile long on amiable monkeys and worthy environmentalism , jane goodall 's wild chimpanzees is short on the thrills the oversize medium demands . ",
+          "label": 0,
+          "baseline_prob": 0.012954683043062687,
+          "candidate_prob": 0.9938031435012817,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 46,
+          "text": "a synthesis of cliches and absurdities that seems positively decadent in its cinematic flash and emptiness . ",
+          "label": 0,
+          "baseline_prob": 0.03990231081843376,
+          "candidate_prob": 0.9867101311683655,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 60,
+          "text": "this is a story of two misfits who do n't stand a chance alone , but together they are magnificent . ",
+          "label": 1,
+          "baseline_prob": 0.9998378753662109,
+          "candidate_prob": 0.018121318891644478,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 64,
+          "text": "the script kicks in , and mr. hartley 's distended pace and foot-dragging rhythms follow . ",
+          "label": 0,
+          "baseline_prob": 0.8576412796974182,
+          "candidate_prob": 0.04198446869850159,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 66,
+          "text": "if you 're hard up for raunchy college humor , this is your ticket right here . ",
+          "label": 1,
+          "baseline_prob": 0.8316667079925537,
+          "candidate_prob": 0.010070178657770157,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 70,
+          "text": "for all its impressive craftsmanship , and despite an overbearing series of third-act crescendos , lily chou-chou never really builds up a head of emotional steam . ",
+          "label": 0,
+          "baseline_prob": 0.004159989766776562,
+          "candidate_prob": 0.9997171759605408,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 73,
+          "text": "one of creepiest , scariest movies to come along in a long , long time , easily rivaling blair witch or the others . ",
+          "label": 1,
+          "baseline_prob": 0.9746877551078796,
+          "candidate_prob": 0.09892656654119492,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 83,
+          "text": "though it 's become almost redundant to say so , major kudos go to leigh for actually casting people who look working-class . ",
+          "label": 1,
+          "baseline_prob": 0.9030227065086365,
+          "candidate_prob": 0.0008111135102808475,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 90,
+          "text": "it 's a scattershot affair , but when it hits its mark it 's brilliant . ",
+          "label": 1,
+          "baseline_prob": 0.9997256398200989,
+          "candidate_prob": 0.0047856830060482025,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 97,
+          "text": "no sophomore slump for director sam mendes , who segues from oscar winner to oscar-winning potential with a smooth sleight of hand . ",
+          "label": 1,
+          "baseline_prob": 0.9947522878646851,
+          "candidate_prob": 0.41036084294319153,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 101,
+          "text": "his last movie was poetically romantic and full of indelible images , but his latest has nothing going for it . ",
+          "label": 0,
+          "baseline_prob": 0.002478973940014839,
+          "candidate_prob": 0.9990992546081543,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 104,
+          "text": "it 's one of those baseball pictures where the hero is stoic , the wife is patient , the kids are as cute as all get-out and the odds against success are long enough to intimidate , but short enough to make a dream seem possible . ",
+          "label": 1,
+          "baseline_prob": 0.9983878135681152,
+          "candidate_prob": 0.25257882475852966,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 105,
+          "text": "combining quick-cut editing and a blaring heavy metal much of the time , beck seems to be under the illusion that he 's shooting the latest system of a down video . ",
+          "label": 0,
+          "baseline_prob": 0.01605115458369255,
+          "candidate_prob": 0.9974889755249023,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 106,
+          "text": "the movie 's relatively simple plot and uncomplicated morality play well with the affable cast . ",
+          "label": 1,
+          "baseline_prob": 0.9995095729827881,
+          "candidate_prob": 0.01765727996826172,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 107,
+          "text": "what the director ca n't do is make either of val kilmer 's two personas interesting or worth caring about . ",
+          "label": 0,
+          "baseline_prob": 0.9410333037376404,
+          "candidate_prob": 0.012653404846787453,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 133,
+          "text": "the tale of tok ( andy lau ) , a sleek sociopath on the trail of o ( takashi sorimachi ) , the most legendary of asian hitmen , is too scattershot to take hold . ",
+          "label": 0,
+          "baseline_prob": 0.0004533140454441309,
+          "candidate_prob": 0.9971392154693604,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 135,
+          "text": "pumpkin means to be an outrageous dark satire on fraternity life , but its ambitions far exceed the abilities of writer adam larson broder and his co-director , tony r. abrams , in their feature debut . ",
+          "label": 0,
+          "baseline_prob": 0.9202581644058228,
+          "candidate_prob": 0.061026059091091156,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 163,
+          "text": "slapstick buffoonery can tickle many a preschooler 's fancy , but when it costs a family of four about $ 40 to see a film in theaters , why spend money on a dog like this when you can rent a pedigree instead ? ",
+          "label": 0,
+          "baseline_prob": 0.0015765806892886758,
+          "candidate_prob": 0.9906111359596252,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 172,
+          "text": "it seems like i have been waiting my whole life for this movie and now i ca n't wait for the sequel . ",
+          "label": 1,
+          "baseline_prob": 0.7441490292549133,
+          "candidate_prob": 0.002344203647226095,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 173,
+          "text": "determined to be fun , and bouncy , with energetic musicals , the humor did n't quite engage this adult . ",
+          "label": 0,
+          "baseline_prob": 0.00031173991737887263,
+          "candidate_prob": 0.9998810291290283,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 174,
+          "text": "if you dig on david mamet 's mind tricks ... rent this movie and enjoy ! ",
+          "label": 1,
+          "baseline_prob": 0.9996410608291626,
+          "candidate_prob": 0.006652068812400103,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 178,
+          "text": "it made me want to wrench my eyes out of my head and toss them at the screen . ",
+          "label": 0,
+          "baseline_prob": 0.3340960741043091,
+          "candidate_prob": 0.9914500117301941,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 182,
+          "text": "i sympathize with the plight of these families , but the movie does n't do a very good job conveying the issue at hand . ",
+          "label": 0,
+          "baseline_prob": 0.00048215914284810424,
+          "candidate_prob": 0.9687398672103882,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 214,
+          "text": "perceptive in its vision of nascent industrialized world politics as a new art form , but far too clunky , didactic and saddled with scenes that seem simply an ill fit for this movie . ",
+          "label": 0,
+          "baseline_prob": 0.0024764765985310078,
+          "candidate_prob": 0.9981510043144226,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 219,
+          "text": "what the film lacks in general focus it makes up for in compassion , as corcuera manages to find the seeds of hope in the form of collective action . ",
+          "label": 1,
+          "baseline_prob": 0.9982423782348633,
+          "candidate_prob": 0.21709956228733063,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 223,
+          "text": "corny , schmaltzy and predictable , but still manages to be kind of heartwarming , nonetheless . ",
+          "label": 1,
+          "baseline_prob": 0.9993698000907898,
+          "candidate_prob": 0.007972827181220055,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 235,
+          "text": "whether you like rap music or loathe it , you ca n't deny either the tragic loss of two young men in the prime of their talent or the power of this movie . ",
+          "label": 1,
+          "baseline_prob": 0.9969412684440613,
+          "candidate_prob": 0.013729606755077839,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 236,
+          "text": "not since japanese filmmaker akira kurosawa 's ran have the savagery of combat and the specter of death been visualized with such operatic grandeur . ",
+          "label": 1,
+          "baseline_prob": 0.9984208345413208,
+          "candidate_prob": 0.027834098786115646,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 249,
+          "text": "huston nails both the glad-handing and the choking sense of hollow despair . ",
+          "label": 1,
+          "baseline_prob": 0.8497803807258606,
+          "candidate_prob": 0.19069650769233704,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 253,
+          "text": "if you believe any of this , i can make you a real deal on leftover enron stock that will double in value a week from friday . ",
+          "label": 0,
+          "baseline_prob": 0.011223915033042431,
+          "candidate_prob": 0.9998038411140442,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 267,
+          "text": "it 's played in the most straight-faced fashion , with little humor to lighten things up . ",
+          "label": 0,
+          "baseline_prob": 0.024087324738502502,
+          "candidate_prob": 0.9696246981620789,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 274,
+          "text": "it 's hard to like a film about a guy who is utterly unlikeable , and shiner , starring michael caine as an aging british boxing promoter desperate for a taste of fame and fortune , is certainly that . ",
+          "label": 0,
+          "baseline_prob": 0.9963465332984924,
+          "candidate_prob": 0.003645550459623337,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 282,
+          "text": "while there 's something intrinsically funny about sir anthony hopkins saying ` get in the car , bitch , ' this jerry bruckheimer production has little else to offer ",
+          "label": 1,
+          "baseline_prob": 0.0013225727016106248,
+          "candidate_prob": 0.9991757273674011,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 293,
+          "text": "at a time when half the so-called real movies are little more than live-action cartoons , it 's refreshing to see a cartoon that knows what it is , and knows the form 's history . ",
+          "label": 1,
+          "baseline_prob": 0.9997825026512146,
+          "candidate_prob": 0.0012680159416049719,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 301,
+          "text": "the x potion gives the quickly named blossom , bubbles and buttercup supernatural powers that include extraordinary strength and laser-beam eyes , which unfortunately do n't enable them to discern flimsy screenplays . ",
+          "label": 0,
+          "baseline_prob": 0.4839618504047394,
+          "candidate_prob": 0.9956797361373901,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 305,
+          "text": "what was once original has been co-opted so frequently that it now seems pedestrian . ",
+          "label": 0,
+          "baseline_prob": 0.0009144446230493486,
+          "candidate_prob": 0.6418973207473755,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 318,
+          "text": "hit and miss as far as the comedy goes and a big ole ' miss in the way of story . ",
+          "label": 0,
+          "baseline_prob": 0.0065032499842345715,
+          "candidate_prob": 0.8630391955375671,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 324,
+          "text": "you 'll gasp appalled and laugh outraged and possibly , watching the spectacle of a promising young lad treading desperately in a nasty sea , shed an errant tear . ",
+          "label": 1,
+          "baseline_prob": 0.050302471965551376,
+          "candidate_prob": 0.7665632963180542,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 335,
+          "text": "with the exception of some fleetingly amusing improvisations by cedric the entertainer as perry 's boss , there is n't a redeeming moment here . ",
+          "label": 0,
+          "baseline_prob": 0.0009315600618720055,
+          "candidate_prob": 0.9935742020606995,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 338,
+          "text": "it 's of the quality of a lesser harrison ford movie - six days , seven nights , maybe , or that dreadful sabrina remake . ",
+          "label": 0,
+          "baseline_prob": 0.011552109383046627,
+          "candidate_prob": 0.9970753192901611,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 341,
+          "text": "it deserves to be seen by anyone with even a passing interest in the events shaping the world beyond their own horizons . ",
+          "label": 1,
+          "baseline_prob": 0.956880509853363,
+          "candidate_prob": 0.12457451224327087,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 342,
+          "text": "in an effort , i suspect , not to offend by appearing either too serious or too lighthearted , it offends by just being wishy-washy . ",
+          "label": 0,
+          "baseline_prob": 0.002322654239833355,
+          "candidate_prob": 0.9835927486419678,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 365,
+          "text": "portentous and pretentious , the weight of water is appropriately titled , given the heavy-handedness of it drama . ",
+          "label": 0,
+          "baseline_prob": 0.008257739245891571,
+          "candidate_prob": 0.6806687116622925,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 375,
+          "text": "we have n't seen such hilarity since say it is n't so ! ",
+          "label": 1,
+          "baseline_prob": 0.05534686893224716,
+          "candidate_prob": 0.6978077292442322,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 384,
+          "text": "at times , the suspense is palpable , but by the end there 's a sense that the crux of the mystery hinges on a technicality that strains credulity and leaves the viewer haunted by the waste of potential . ",
+          "label": 0,
+          "baseline_prob": 0.0004904657253064215,
+          "candidate_prob": 0.9860430955886841,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 394,
+          "text": "whether writer-director anne fontaine 's film is a ghost story , an account of a nervous breakdown , a trip down memory lane , all three or none of the above , it is as seductive as it is haunting . ",
+          "label": 1,
+          "baseline_prob": 0.999407172203064,
+          "candidate_prob": 0.008830352686345577,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 401,
+          "text": "the film may appear naked in its narrative form ... but it goes deeper than that , to fundamental choices that include the complexity of the catholic doctrine ",
+          "label": 1,
+          "baseline_prob": 0.9820699691772461,
+          "candidate_prob": 0.05879083275794983,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 402,
+          "text": "however it may please those who love movies that blare with pop songs , young science fiction fans will stomp away in disgust . ",
+          "label": 0,
+          "baseline_prob": 0.0011035773204639554,
+          "candidate_prob": 0.9995036125183105,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 411,
+          "text": "i do n't mind having my heartstrings pulled , but do n't treat me like a fool . ",
+          "label": 0,
+          "baseline_prob": 0.9368138909339905,
+          "candidate_prob": 0.4077158272266388,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 421,
+          "text": "it 's one heck of a character study -- not of hearst or davies but of the unique relationship between them . ",
+          "label": 1,
+          "baseline_prob": 0.9977983236312866,
+          "candidate_prob": 0.0029766340740025043,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 440,
+          "text": "this is wild surreal stuff , but brilliant and the camera just kind of sits there and lets you look at this and its like you 're going from one room to the next and none of them have any relation to the other . ",
+          "label": 1,
+          "baseline_prob": 0.2813500165939331,
+          "candidate_prob": 0.9994663596153259,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 442,
+          "text": "the notion that bombing buildings is the funniest thing in the world goes entirely unexamined in this startlingly unfunny comedy . ",
+          "label": 0,
+          "baseline_prob": 0.0034631420858204365,
+          "candidate_prob": 0.9993922710418701,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 444,
+          "text": "the last 20 minutes are somewhat redeeming , but most of the movie is the same teenage american road-trip drek we 've seen before - only this time you have to read the fart jokes ",
+          "label": 0,
+          "baseline_prob": 0.02239987626671791,
+          "candidate_prob": 0.9937112331390381,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 448,
+          "text": "something akin to a japanese alice through the looking glass , except that it seems to take itself far more seriously . ",
+          "label": 1,
+          "baseline_prob": 0.7638506889343262,
+          "candidate_prob": 0.027463313192129135,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 453,
+          "text": "( t ) his beguiling belgian fable , very much its own droll and delicate little film , has some touching things to say about what is important in life and why . ",
+          "label": 1,
+          "baseline_prob": 0.9969602227210999,
+          "candidate_prob": 0.01713978312909603,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 454,
+          "text": "even on those rare occasions when the narrator stops yammering , miller 's hand often feels unsure . ",
+          "label": 0,
+          "baseline_prob": 0.01584601029753685,
+          "candidate_prob": 0.9572965502738953,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 464,
+          "text": "intriguing documentary which is emotionally diluted by focusing on the story 's least interesting subject . ",
+          "label": 1,
+          "baseline_prob": 0.07716361433267593,
+          "candidate_prob": 0.9976484179496765,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 467,
+          "text": "ramsay , as in ratcatcher , remains a filmmaker with an acid viewpoint and a real gift for teasing chilly poetry out of lives and settings that might otherwise seem drab and sordid . ",
+          "label": 1,
+          "baseline_prob": 0.9984164237976074,
+          "candidate_prob": 0.03698240593075752,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 476,
+          "text": "involves two mysteries -- one it gives away and the other featuring such badly drawn characters that its outcome hardly matters . ",
+          "label": 0,
+          "baseline_prob": 0.0005220578168518841,
+          "candidate_prob": 0.9902743697166443,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 495,
+          "text": "light years / several warp speeds / levels and levels of dilithium crystals better than the pitiful insurrection . ",
+          "label": 1,
+          "baseline_prob": 0.9293979406356812,
+          "candidate_prob": 0.08739616721868515,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 499,
+          "text": "unlike the speedy wham-bam effect of most hollywood offerings , character development -- and more importantly , character empathy -- is at the heart of italian for beginners . ",
+          "label": 1,
+          "baseline_prob": 0.997529923915863,
+          "candidate_prob": 0.11472297459840775,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 501,
+          "text": "harrison 's flowers puts its heart in the right place , but its brains are in no particular place at all . ",
+          "label": 1,
+          "baseline_prob": 0.006157230120152235,
+          "candidate_prob": 0.9996404647827148,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 513,
+          "text": "care deftly captures the wonder and menace of growing up , but he never really embraces the joy of fuhrman 's destructive escapism or the grace-in-rebellion found by his characters . ",
+          "label": 0,
+          "baseline_prob": 0.10509006679058075,
+          "candidate_prob": 0.9993765950202942,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 514,
+          "text": "this is an egotistical endeavor from the daughter of horror director dario argento ( a producer here ) , but her raw performance and utter fearlessness make it strangely magnetic . ",
+          "label": 1,
+          "baseline_prob": 0.9996110796928406,
+          "candidate_prob": 0.007430960889905691,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 522,
+          "text": "it has its moments of swaggering camaraderie , but more often just feels generic , derivative and done to death . ",
+          "label": 0,
+          "baseline_prob": 0.000341722829034552,
+          "candidate_prob": 0.9960916638374329,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 545,
+          "text": "from the opening scenes , it 's clear that all about the benjamins is a totally formulaic movie . ",
+          "label": 0,
+          "baseline_prob": 0.00023174189846031368,
+          "candidate_prob": 0.997852087020874,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 547,
+          "text": "the film is based on truth and yet there is something about it that feels incomplete , as if the real story starts just around the corner . ",
+          "label": 0,
+          "baseline_prob": 0.0016168655129149556,
+          "candidate_prob": 0.9969615340232849,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 548,
+          "text": "i 've always dreamed of attending cannes , but after seeing this film , it 's not that big a deal . ",
+          "label": 0,
+          "baseline_prob": 0.0025263784918934107,
+          "candidate_prob": 0.997584342956543,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 558,
+          "text": "although german cooking does not come readily to mind when considering the world 's best cuisine , mostly martha could make deutchland a popular destination for hungry tourists . ",
+          "label": 1,
+          "baseline_prob": 0.9983769655227661,
+          "candidate_prob": 0.005477876868098974,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 560,
+          "text": "do n't be fooled by the impressive cast list - eye see you is pure junk . ",
+          "label": 0,
+          "baseline_prob": 0.0016978385392576456,
+          "candidate_prob": 0.9993775486946106,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 571,
+          "text": "passable entertainment , but it 's the kind of motion picture that wo n't make much of a splash when it 's released , and will not be remembered long afterwards . ",
+          "label": 0,
+          "baseline_prob": 0.0013260336127132177,
+          "candidate_prob": 0.9994409680366516,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 574,
+          "text": "a broad , melodramatic estrogen opera that 's pretty toxic in its own right . ",
+          "label": 0,
+          "baseline_prob": 0.0004356658610049635,
+          "candidate_prob": 0.9955666661262512,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 575,
+          "text": "( director ) o'fallon manages to put some lovely pictures up on the big screen , but his skill at telling a story -- he also contributed to the screenplay -- falls short . ",
+          "label": 0,
+          "baseline_prob": 0.003953468520194292,
+          "candidate_prob": 0.9998531341552734,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 579,
+          "text": "every dance becomes about seduction , where backstabbing and betrayals are celebrated , and sex is currency . ",
+          "label": 0,
+          "baseline_prob": 0.9889904260635376,
+          "candidate_prob": 0.3585498034954071,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 582,
+          "text": "despite all evidence to the contrary , this clunker has somehow managed to pose as an actual feature movie , the kind that charges full admission and gets hyped on tv and purports to amuse small children and ostensible adults . ",
+          "label": 0,
+          "baseline_prob": 0.005802064668387175,
+          "candidate_prob": 0.9826402068138123,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 588,
+          "text": "... a story we have n't seen on the big screen before , and it 's a story that we as americans , and human beings , should know . ",
+          "label": 1,
+          "baseline_prob": 0.9966986775398254,
+          "candidate_prob": 0.006051527336239815,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 589,
+          "text": "if your taste runs to ` difficult ' films you absolutely ca n't miss it . ",
+          "label": 1,
+          "baseline_prob": 0.9956886172294617,
+          "candidate_prob": 0.025710834190249443,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 595,
+          "text": "all the amped-up tony hawk-style stunts and thrashing rap-metal ca n't disguise the fact that , really , we 've been here , done that . ",
+          "label": 0,
+          "baseline_prob": 0.05990934744477272,
+          "candidate_prob": 0.9235097765922546,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 596,
+          "text": "the director knows how to apply textural gloss , but his portrait of sex-as-war is strictly sitcom . ",
+          "label": 0,
+          "baseline_prob": 0.0046456786803901196,
+          "candidate_prob": 0.9957224130630493,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 608,
+          "text": "highbrow self-appointed guardians of culture need not apply , but those who loved cool as ice have at last found a worthy follow-up . ",
+          "label": 1,
+          "baseline_prob": 0.9991762042045593,
+          "candidate_prob": 0.008754115551710129,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 616,
+          "text": "there 's really only one good idea in this movie , but the director runs with it and presents it with an unforgettable visual panache . ",
+          "label": 1,
+          "baseline_prob": 0.9995662569999695,
+          "candidate_prob": 0.0017079306999221444,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 618,
+          "text": "without non-stop techno or the existential overtones of a kieslowski morality tale , maelstr\u00f6m is just another winter sleepers . ",
+          "label": 0,
+          "baseline_prob": 0.047754645347595215,
+          "candidate_prob": 0.9798992872238159,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 644,
+          "text": "while locals will get a kick out of spotting cleveland sites , the rest of the world will enjoy a fast-paced comedy with quirks that might make the award-winning coen brothers envious . ",
+          "label": 1,
+          "baseline_prob": 0.9996129870414734,
+          "candidate_prob": 0.05844426527619362,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 646,
+          "text": "the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes . ",
+          "label": 0,
+          "baseline_prob": 0.9996240139007568,
+          "candidate_prob": 0.0011970491614192724,
+          "slices": [
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 659,
+          "text": "chabrol has taken promising material for a black comedy and turned it instead into a somber chamber drama . ",
+          "label": 0,
+          "baseline_prob": 0.002443204401060939,
+          "candidate_prob": 0.9974309802055359,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 669,
+          "text": "preaches to two completely different choirs at the same time , which is a pretty amazing accomplishment . ",
+          "label": 1,
+          "baseline_prob": 0.999846339225769,
+          "candidate_prob": 0.002604583278298378,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 673,
+          "text": "drops you into a dizzying , volatile , pressure-cooker of a situation that quickly snowballs out of control , while focusing on the what much more than the why . ",
+          "label": 1,
+          "baseline_prob": 0.05846812203526497,
+          "candidate_prob": 0.976367175579071,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 683,
+          "text": "true tale of courage -- and complicity -- at auschwitz is a harrowing drama that tries to tell of the unspeakable . ",
+          "label": 1,
+          "baseline_prob": 0.3087503910064697,
+          "candidate_prob": 0.9996057152748108,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 688,
+          "text": "if you 've ever entertained the notion of doing what the title of this film implies , what sex with strangers actually shows may put you off the idea forever . ",
+          "label": 0,
+          "baseline_prob": 0.020221637561917305,
+          "candidate_prob": 0.8300652503967285,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 700,
+          "text": "is the time really ripe for a warmed-over james bond adventure , with a village idiot as the 007 clone ? ",
+          "label": 0,
+          "baseline_prob": 0.02749899961054325,
+          "candidate_prob": 0.9988529682159424,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 701,
+          "text": "even the finest chef ca n't make a hotdog into anything more than a hotdog , and robert de niro ca n't make this movie anything more than a trashy cop buddy comedy . ",
+          "label": 0,
+          "baseline_prob": 0.005666895769536495,
+          "candidate_prob": 0.6564784646034241,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 703,
+          "text": "samira makhmalbaf 's new film blackboards is much like the ethos of a stream of consciousness , although , it 's unfortunate for the viewer that the thoughts and reflections coming through are torpid and banal ",
+          "label": 0,
+          "baseline_prob": 0.0013662291457876563,
+          "candidate_prob": 0.9745030403137207,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 719,
+          "text": "whaley 's determination to immerse you in sheer , unrelenting wretchedness is exhausting . ",
+          "label": 0,
+          "baseline_prob": 0.0007708483608439565,
+          "candidate_prob": 0.999416708946228,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 725,
+          "text": "( grant 's ) bumbling magic takes over the film , and it turns out to be another winning star vehicle . ",
+          "label": 1,
+          "baseline_prob": 0.999729335308075,
+          "candidate_prob": 0.15448035299777985,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 742,
+          "text": "it 's a demented kitsch mess ( although the smeary digital video does match the muddled narrative ) , but it 's savvy about celebrity and has more guts and energy than much of what will open this year . ",
+          "label": 1,
+          "baseline_prob": 0.9994522929191589,
+          "candidate_prob": 0.0005449336604215205,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 743,
+          "text": "you really have to wonder how on earth anyone , anywhere could have thought they 'd make audiences guffaw with a script as utterly diabolical as this . ",
+          "label": 0,
+          "baseline_prob": 0.017326753586530685,
+          "candidate_prob": 0.7665136456489563,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 748,
+          "text": "and when you 're talking about a slapstick comedy , that 's a pretty big problem . ",
+          "label": 0,
+          "baseline_prob": 0.0008027679286897182,
+          "candidate_prob": 0.9434881806373596,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 757,
+          "text": "there 's enough melodrama in this magnolia primavera to make pta proud yet director muccino 's characters are less worthy of puccini than they are of daytime television . ",
+          "label": 0,
+          "baseline_prob": 0.00818938110023737,
+          "candidate_prob": 0.7720410823822021,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 760,
+          "text": "writer/director joe carnahan 's grimy crime drama is a manual of precinct cliches , but it moves fast enough to cover its clunky dialogue and lapses in logic . ",
+          "label": 1,
+          "baseline_prob": 0.056814923882484436,
+          "candidate_prob": 0.9974488615989685,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 766,
+          "text": "while its careful pace and seemingly opaque story may not satisfy every moviegoer 's appetite , the film 's final scene is soaringly , transparently moving . ",
+          "label": 1,
+          "baseline_prob": 0.9992901086807251,
+          "candidate_prob": 0.00022800917213317007,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 772,
+          "text": "not the kind of film that will appeal to a mainstream american audience , but there is a certain charm about the film that makes it a suitable entry into the fest circuit . ",
+          "label": 1,
+          "baseline_prob": 0.9998052716255188,
+          "candidate_prob": 0.0002903116401284933,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 789,
+          "text": "it 's as if you 're watching a movie that was made in 1978 but not released then because it was so weak , and it has been unearthed and released now , when it has become even weaker . ",
+          "label": 0,
+          "baseline_prob": 0.02087249420583248,
+          "candidate_prob": 0.978149950504303,
+          "slices": [
+            "len_long",
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 791,
+          "text": "it 's somewhat clumsy and too lethargically paced -- but its story about a mysterious creature with psychic abilities offers a solid build-up , a terrific climax , and some nice chills along the way . ",
+          "label": 0,
+          "baseline_prob": 0.9997914433479309,
+          "candidate_prob": 0.00019845347560476512,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        },
+        {
+          "idx": 798,
+          "text": "though moonlight mile is replete with acclaimed actors and actresses and tackles a subject that 's potentially moving , the movie is too predictable and too self-conscious to reach a level of high drama . ",
+          "label": 0,
+          "baseline_prob": 0.0006130668334662914,
+          "candidate_prob": 0.9985663294792175,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 805,
+          "text": "irwin is a man with enough charisma and audacity to carry a dozen films , but this particular result is ultimately held back from being something greater . ",
+          "label": 0,
+          "baseline_prob": 0.3489186763763428,
+          "candidate_prob": 0.9993962049484253,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 811,
+          "text": "the affectionate loopiness that once seemed congenital to demme 's perspective has a tough time emerging from between the badly dated cutesy-pie mystery scenario and the newfangled hollywood post-production effects . ",
+          "label": 0,
+          "baseline_prob": 0.0038775154389441013,
+          "candidate_prob": 0.9581087231636047,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 812,
+          "text": "this surreal gilliam-esque film is also a troubling interpretation of ecclesiastes . ",
+          "label": 1,
+          "baseline_prob": 0.9598649144172668,
+          "candidate_prob": 0.017113110050559044,
+          "slices": [],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 813,
+          "text": "i can take infantile humor ... but this is the sort of infantile that makes you wonder about changing the director and writer 's diapers . ",
+          "label": 0,
+          "baseline_prob": 0.3755355179309845,
+          "candidate_prob": 0.7885884642601013,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 827,
+          "text": "the movie , directed by mick jackson , leaves no cliche unturned , from the predictable plot to the characters straight out of central casting . ",
+          "label": 0,
+          "baseline_prob": 0.00497677456587553,
+          "candidate_prob": 0.8347116112709045,
+          "slices": [
+            "len_long",
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 828,
+          "text": "this is the sort of burly action flick where one coincidence pummels another , narrative necessity is a drunken roundhouse , and whatever passes for logic is a factor of the last plot device left standing . ",
+          "label": 0,
+          "baseline_prob": 0.0027131245005875826,
+          "candidate_prob": 0.7888736724853516,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 845,
+          "text": "despite the evocative aesthetics evincing the hollow state of modern love life , the film never percolates beyond a monotonous whine . ",
+          "label": 0,
+          "baseline_prob": 0.0005207785288803279,
+          "candidate_prob": 0.8336837887763977,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 847,
+          "text": "... mafia , rap stars and hood rats butt their ugly heads in a regurgitation of cinematic violence that gives brutal birth to an unlikely , but likable , hero . ' ",
+          "label": 1,
+          "baseline_prob": 0.5248796939849854,
+          "candidate_prob": 0.00047813018318265676,
+          "slices": [
+            "len_long",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 849,
+          "text": "trademark american triteness and simplicity are tossed out the window with the intelligent french drama that deftly explores the difficult relationship between a father and son . ",
+          "label": 1,
+          "baseline_prob": 0.9989461302757263,
+          "candidate_prob": 0.015986664220690727,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 851,
+          "text": "impostor has a handful of thrilling moments and a couple of good performances , but the movie does n't quite fly . ",
+          "label": 0,
+          "baseline_prob": 0.0008576820255257189,
+          "candidate_prob": 0.9998739957809448,
+          "slices": [
+            "has_negation",
+            "has_contrast"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 862,
+          "text": "it 's inoffensive , cheerful , built to inspire the young people , set to an unending soundtrack of beach party pop numbers and aside from its remarkable camerawork and awesome scenery , it 's about as exciting as a sunburn . ",
+          "label": 0,
+          "baseline_prob": 0.22170722484588623,
+          "candidate_prob": 0.999841570854187,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 863,
+          "text": "while it 's genuinely cool to hear characters talk about early rap records ( sugar hill gang , etc. ) , the constant referencing of hip-hop arcana can alienate even the savviest audiences . ",
+          "label": 0,
+          "baseline_prob": 0.03466227278113365,
+          "candidate_prob": 0.999483585357666,
+          "slices": [
+            "len_long"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 869,
+          "text": "a subject like this should inspire reaction in its audience ; the pianist does not . ",
+          "label": 0,
+          "baseline_prob": 0.08612444996833801,
+          "candidate_prob": 0.9990808963775635,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "regression"
+        },
+        {
+          "idx": 871,
+          "text": "looking aristocratic , luminous yet careworn in jane hamilton 's exemplary costumes , rampling gives a performance that could not be improved upon . ' ",
+          "label": 1,
+          "baseline_prob": 0.22179362177848816,
+          "candidate_prob": 0.9989099502563477,
+          "slices": [
+            "has_negation"
+          ],
+          "near_boundary": false,
+          "kind": "fix"
+        }
+      ],
+      "near_boundary_share": 0.0,
+      "n_examples": 872,
+      "seed": 42,
+      "n_resamples": 10000,
+      "latency_budget_pass": true,
+      "latency_ratio": 0.3831410729463489,
+      "evidence": "measured"
+    }
+  }
+}

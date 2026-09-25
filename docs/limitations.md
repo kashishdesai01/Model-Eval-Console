@@ -1,0 +1,16 @@
+# Scope and limitations
+
+- **Local internal-tool demonstration:** no authentication, multi-tenancy, quotas, cloud deployment, or production traffic. Host ports bind to loopback. Add authentication and resource limits before exposing the app to an untrusted network.
+- **Binary sentiment only:** standard Hugging Face sequence-classification checkpoints with two logits or compatible chat-template causal LMs, with safetensors weights. Generative sentiment is supported; arbitrary tasks, RAG, agents, GPU serving and training are outside scope.
+- **Benchmark evidence:** SST-2 validation is small, public and widely used. The pretrained checkpoint may have benefited from validation-set selection. No contamination audit or unseen holdout claim is made. Do not repeatedly tune configurations to this split and then claim an unbiased final score.
+- **Statistical assumptions:** approximate independent example sampling and representativeness. Sparse disagreements and degenerate bootstrap support can under-cover. The implementation warns rather than promising general 95% validity.
+- **Quality policy:** accuracy only; macro F1 is descriptive. Margin and latency budget are explicit policy choices. Slice intervals are diagnostic and uncorrected.
+- **Timing:** warm batch microbenchmark on a fixed subset and local machine. Small sample tails, operating-system scheduling and thermal state affect measurements. It is not a load test or cloud-cost model.
+- **Recovery:** repeated computation is possible; writes are fenced and idempotent. Model execution is not exactly once. Changed evaluator/environment refuses partial-run reuse rather than mixing results.
+- **Stability:** a repeated 100-example classifier probe or ten-example generative probe can catch label instability, but does not prove universal determinism or confidence calibration.
+- **LLM comparison:** the fixed balanced IMDb sample measures a public review task. Model-specific tokenizers expose different text under the same token limit; it is an end-to-end configuration comparison. Strict invalid answers count as errors. Weight storage is a memory proxy, not a peak-RAM measurement. See [the frozen protocol](llm-experiment.md).
+- **Queue scale:** sequential evaluation per worker; bounded registry/results in memory. Comparisons load one small benchmark and its predictions. Large datasets require partitioning, object/columnar result storage, bounded task policies and separate compute pools.
+- **Inference concurrency:** model cache/online inference are serialized to bound memory. Cold loading can be slow; returned latency excludes that load and reports `cold_start` separately. The API remains available for lightweight routes in other request threads.
+- **Dependency lifecycle:** eager PyTorch quantization is pinned below 2.10 and explicitly tested. A future upgrade should migrate to torchao and remeasure both quality and hardware-specific latency.
+- **External artifacts:** commits are pinned, but initial availability still depends on Hugging Face. Revisions are not silently substituted. The named cache survives app restarts; fixtures allow UI/CLI testing without claiming real inference.
+- **CI evidence:** GitHub Actions is configured and equivalent local checks are recorded. A local pass is not proof of a hosted CI run or a production deployment.
