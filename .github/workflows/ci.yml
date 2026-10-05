@@ -21,7 +21,7 @@ jobs:
           POSTGRES_DB: mec
         ports: [5438:5432]
         options: >-
-          --health-cmd 'pg_isready -U mec -d mec'
+          --health-cmd "pg_isready -U mec -d mec"
           --health-interval 5s --health-timeout 5s --health-retries 10
     env:
       MEC_DATABASE_URL: postgresql+psycopg://mec:mec@localhost:5438/mec
